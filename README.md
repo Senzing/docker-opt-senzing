@@ -2,16 +2,20 @@
 
 ## Overview
 
-The `senzing/opt-senzing` docker image contains the `/opt/senzing` directory baked in.
+The `senzing/opt-senzing` docker image contains a "baked-in" `/opt/senzing` directory.
 
-The image is meant to be used when creating docker images from Dockerfiles that begin with:
+The image is meant to be used as the value of a Dockerfile `FROM` statement. Examples:
+
+```Dockerfile
+FROM senzing/opt-senzing
+```
 
 ```Dockerfile
 ARG BASE_IMAGE=debian:9
 FROM ${BASE_IMAGE}
 ```
 
-Example:
+Example docker build:
 
 ```console
 export BASE_IMAGE=senzing/opt-senzing
