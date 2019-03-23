@@ -132,7 +132,8 @@ The following software programs need to be installed.
 
 #### Download Senzing_API.tgz
 
-1. See [Downloading Senzing_API.tgz](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/create-senzing-dir.md#downloading-senzing_apitgz)
+1. See [Downloading Senzing_API.tgz](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/create-senzing-dir.md#downloading-senzing_apitgz) for instructions on downloading file.
+1. Download `Senzing_API.tgz` to ${GIT_REPOSITORY_DIR}/[downloads](./downloads) directory.
 
 ### Build docker image for development
 
