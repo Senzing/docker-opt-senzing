@@ -114,7 +114,7 @@ Run the docker container with `/opt/senzing` externalized to a named volume.
     sudo docker run \
       --rm \
       --volume ${DOCKER_VOLUME_NAME}:/opt/senzing \
-      senzing/init-named-volume
+      senzing/opt-senzing
     ```
 
 ## Develop
