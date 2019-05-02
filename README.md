@@ -41,8 +41,8 @@ This works on "named volumes", but does not work on "host volumes" nor "anonymou
 1. [Demonstrate](#demonstrate)
     1. [Build docker image](#build-docker-image)
     1. [Configuration](#configuration)
-    1. [Create docker named volume](#create-docker-named-volume)
-    1. [Run docker container](#run-docker-container)
+    1. [Demonstration 1](#demonstration-1)
+    1. [Demonstration 2](#demonstration-2)
 1. [Develop](#develop)
     1. [Prerequisite software](#prerequisite-software)
     1. [Clone repository](#clone-repository)
@@ -78,7 +78,23 @@ See [Develop](#develop).
 
 No configuration.
 
-### Create docker named volume
+### Demonstration 1
+
+Run the docker container with `/opt/senzing` inside the docker container.
+
+1. Run the docker container.  Example:
+
+    ```console
+    sudo docker run \
+      --interactive \
+      --rm \
+      --tty \
+      senzing/opt-senzing
+    ```
+
+### Demonstration 2
+
+Run the docker container with `/opt/senzing` externalized to a named volume.
 
 1. :pencil2: Set environment variables.  Example
 
@@ -91,8 +107,6 @@ No configuration.
     ```console
     docker volume create --name ${DOCKER_VOLUME_NAME}
     ```
-
-### Run docker container
 
 1. Run the docker container.  Example:
 
