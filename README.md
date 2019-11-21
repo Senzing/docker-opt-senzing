@@ -1,5 +1,9 @@
 # docker-opt-senzing
 
+## :warning: Obsolete
+
+This repository has not been updated to use the RPM/DEB installation of Senzing.
+
 ## Overview
 
 The `senzing/opt-senzing` docker image contains a "baked-in" `/opt/senzing` directory.
@@ -134,18 +138,17 @@ The following software programs need to be installed:
     ```console
     export GIT_ACCOUNT=senzing
     export GIT_REPOSITORY=docker-opt-senzing
-    ```
-
-1. Follow steps in [clone-repository](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/clone-repository.md) to install the Git repository.
-
-1. After the repository has been cloned, be sure the following are set:
-
-    ```console
     export GIT_ACCOUNT_DIR=~/${GIT_ACCOUNT}.git
     export GIT_REPOSITORY_DIR="${GIT_ACCOUNT_DIR}/${GIT_REPOSITORY}"
     ```
 
+1. Follow steps in [clone-repository](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/clone-repository.md) to install the Git repository.
+
 ### Download Senzing_API.tgz
+
+:warning: **OBSOLETE:**  This is an obsolete step.
+The method of installation is now using RPM/DEB files.
+Reference: [How to initialize Senzing with Docker](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/initialize-senzing-with-docker.md)
 
 1. Visit [Downloading Senzing_API.tgz](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/create-senzing-dir.md#downloading-senzing_apitgz)
 1. Download `Senzing_API.tgz` to ${GIT_REPOSITORY_DIR}/[downloads](./downloads) directory.
