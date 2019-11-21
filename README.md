@@ -1,5 +1,9 @@
 # docker-opt-senzing
 
+## :warning: Obsolete
+
+This repository has not been updated to use the RPM/DEB installation of Senzing.
+
 ## Overview
 
 The `senzing/opt-senzing` docker image contains a "baked-in" `/opt/senzing` directory.
@@ -51,6 +55,14 @@ This works on "named volumes", but does not work on "host volumes" nor "anonymou
 1. [Examples](#examples)
 1. [Errors](#errors)
 1. [References](#references)
+
+### Legend
+
+1. :thinking: - A "thinker" icon means that a little extra thinking may be required.
+   Perhaps you'll need to make some choices.
+   Perhaps it's an optional step.
+1. :pencil2: - A "pencil" icon means that the instructions may need modification before performing.
+1. :warning: - A "warning" icon means that something tricky is happening, so pay attention.
 
 ## Expectations
 
@@ -134,39 +146,38 @@ The following software programs need to be installed:
     ```console
     export GIT_ACCOUNT=senzing
     export GIT_REPOSITORY=docker-opt-senzing
-    ```
-
-1. Follow steps in [clone-repository](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/clone-repository.md) to install the Git repository.
-
-1. After the repository has been cloned, be sure the following are set:
-
-    ```console
     export GIT_ACCOUNT_DIR=~/${GIT_ACCOUNT}.git
     export GIT_REPOSITORY_DIR="${GIT_ACCOUNT_DIR}/${GIT_REPOSITORY}"
     ```
 
+1. Follow steps in [clone-repository](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/clone-repository.md) to install the Git repository.
+
 ### Download Senzing_API.tgz
+
+:warning: **OBSOLETE:**  This is an obsolete step.
+The method of installation is now using RPM/DEB files.
+For information on the new method of installation, see "[How to initialize Senzing with Docker](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/initialize-senzing-with-docker.md)".
 
 1. Visit [Downloading Senzing_API.tgz](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/create-senzing-dir.md#downloading-senzing_apitgz)
 1. Download `Senzing_API.tgz` to ${GIT_REPOSITORY_DIR}/[downloads](./downloads) directory.
 
 ### Build docker image for development
 
-1. Option #1 - Using `docker` command and local repository.
+1. **Option #1:** Using `docker` command and local repository.
 
     ```console
     cd ${GIT_REPOSITORY_DIR}
     sudo docker build --tag senzing/opt-senzing .
     ```
 
-1. Option #2 - Using `make` command.
+1. **Option #2:** Using `make` command.
 
     ```console
     cd ${GIT_REPOSITORY_DIR}
     sudo make docker-build
     ```
 
-    Note: `sudo make docker-build-base` can be used to create cached docker layers.
+    Note: `sudo make docker-build-development-cache` can be used to create cached docker layers.
 
 ## Examples
 
