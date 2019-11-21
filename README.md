@@ -56,6 +56,14 @@ This works on "named volumes", but does not work on "host volumes" nor "anonymou
 1. [Errors](#errors)
 1. [References](#references)
 
+### Legend
+
+1. :thinking: - A "thinker" icon means that a little extra thinking may be required.
+   Perhaps you'll need to make some choices.
+   Perhaps it's an optional step.
+1. :pencil2: - A "pencil" icon means that the instructions may need modification before performing.
+1. :warning: - A "warning" icon means that something tricky is happening, so pay attention.
+
 ## Expectations
 
 ### Space
@@ -155,21 +163,21 @@ For information on the new method of installation, see "[How to initialize Senzi
 
 ### Build docker image for development
 
-1. Option #1 - Using `docker` command and local repository.
+1. **Option #1:** Using `docker` command and local repository.
 
     ```console
     cd ${GIT_REPOSITORY_DIR}
     sudo docker build --tag senzing/opt-senzing .
     ```
 
-1. Option #2 - Using `make` command.
+1. **Option #2:** Using `make` command.
 
     ```console
     cd ${GIT_REPOSITORY_DIR}
     sudo make docker-build
     ```
 
-    Note: `sudo make docker-build-base` can be used to create cached docker layers.
+    Note: `sudo make docker-build-development-cache` can be used to create cached docker layers.
 
 ## Examples
 
